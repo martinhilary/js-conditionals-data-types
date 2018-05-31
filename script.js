@@ -10,15 +10,12 @@
 // ====================================================================
 // Write your solution below.
 // ====================================================================
-
-
-
-
-
-
-
-
-
+/*
+var x= prompt("Please enter one number")
+var y =prompt("Please enter another number")
+var z= Math.abs(x-y);
+console.log("The difference in your numbers are " + z);
+*/
 
 
 
@@ -36,21 +33,42 @@
 // ====================================================================
 // Write your solution below
 // ====================================================================
+/*
+var x= prompt("Enter an number")
 
+function ordinal_suffix_of(i) {
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
+}
+var y= ordinal_suffix_of(x);
 
+console.log("You are "+ y+  " place");
 
+*/
+/* Jay's answer
+var yes = prompt(“PART 2, Please input a number here: “);
+var len = yes.length;
 
-
-
-
-
-
-
-
-
-
-
-
+if ((len == 1) || (yes[len-2] != 1)) {
+    if (yes[len-1] == 1) {
+        console.log(yes + ‘st’);
+    } else if (yes[len-1] == 2) {
+        console.log(yes + ‘nd’);
+    } else if (yes[len-1] == 3) {
+        console.log(yes + ‘rd’);
+    } else console.log(yes + ‘th’);
+} else console.log(yes + ‘th’);
+*/
 
 
 // ========================== Exercise 3 =================================
@@ -62,14 +80,24 @@
 // =======================================================================
 
 
+/*
+var x= Math.floor(Math.random() * 10) + 1  
+while(true)
+{
+if(x == y)
+{
+	alert("It matches!");
+	break;
 
+}
+else
+{
+	alert("Try again");
+	var y= prompt("Hey boy give me one number from 1 to 10","Let's see whether it matches")
+}
 
-
-
-
-
-
-
+}
+*/
 
 
 
@@ -92,16 +120,19 @@
 
 
 
+/*
+var x=Math.random().toString(36).substring(6);
+alert("This is your randomly generated alphanumeric string "+ x);
+*/
+
+/*
+var y=prompt("Enter the ength of a random alphanumeric string");
+var length= parseInt(y);
+var z=Math.random().toString(36).substring(length);
+alert(z);
 
 
-
-
-
-
-
-
-
-
+*/
 
 
 
@@ -114,14 +145,21 @@
 // ====================================================================
 // Write your solution below.
 // ====================================================================
-
+/*
 var testArray = [1, 2, 4, 8, 16, 32, 64, 128];
-
-
-
-
-
-
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+testArray=shuffle(testArray);
+console.log(testArray);
+*/
 
 
 
@@ -171,7 +209,7 @@ var Phonebook = {
 
 
 
-
+var name=prompt("Who do you want to call?")
 
 
 
